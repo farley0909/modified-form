@@ -1,10 +1,14 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "strict": true,
-        "outDir": "src/dist/",
-        "noEmitOnError": true,
-        "esModuleInterop": true
-    },
-    "include": ["src/**/*.ts"]
+  "compilerOptions": {
+    "target": "ES2017",   
+    "allowJs": true,  
+    "module": "CommonJS",
+    "outDir": "src/dist/",                           
+    "forceConsistentCasingInFileNames": true, 
+    "strict": false,
+    "skipLibCheck": true, 
+    "lib": ["esnext"],
+    "esModuleInterop": true   
+  },
+  "include": ["src/**/*.ts"]                         
 }
