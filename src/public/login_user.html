@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./css/login_user.css">
+    <title>Login</title>
+</head>
+<body>
+    <main class="container">
+            <h1>Faça seu login</h1> 
+            <form id="formLogin" action="http://localhost:8080/usuario/validar">
+                    <label id="lbEmail">Email</label>
+                    <input id="email" type="text">
+                   
+                    <label id="lbSenha">Senha</label>
+                    <input id="senha" type="password">
+               
+                <span>Não tem uma conta? <a href="http://localhost:8080/usuario/cadastro" target="_self">Cadastre-se</a></span>
+                <button id="btnEntrar" type="submit" class="btn waves-effect waves-light">Entrar</button>  
+            </form>     
+    </main>
+    <script src="./scripts/login_user.js"></script>
+</body>
+</html>

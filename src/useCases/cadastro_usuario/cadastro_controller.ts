@@ -36,12 +36,11 @@ export class cadastroController{
             port: 587,
             secure: false, 
             auth: {
-           // user: 'teste@gmail.com', 
-            // pass: 'senha123', 
+                user: 'chama.suporte.dont.reply@gmail.com', 
+                pass: 'uppvpekuhkaeroco', 
             },
         });
-        console.log("Data: ", this.usModel.getId(), " || Salt: ",process.env.JWT_SECRET)
-        const idHash = await jwt.sign(this.usModel.getId(), process.env.JWT_SECRET)
+        const idHash = jwt.sign({id: this.usModel.getId()}, process.env.JWT_SECRET, {expiresIn:"1h"})
         let info = await transporter.sendMail({
             from: 'Projeção agricola<jose.farley@academico.ifpb.edu.b>',
             to: this.usModel.getEmail(), 

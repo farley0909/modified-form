@@ -7,6 +7,7 @@ import path from 'path'
 import { router_user_register } from './routes/route-cadastro-usuario'
 import { router_user_register_validation } from './routes/route-validaCadastro'
 import { route_confirmar } from './routes/route-confirmar'
+import { rota_user_login } from './routes/route-login-usuario'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -22,5 +23,6 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use(router_user_register)
 app.use(router_user_register_validation)
 app.use (route_confirmar)
+app.use(rota_user_login)
 //Exportando app
 export {app}
