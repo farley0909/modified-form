@@ -13,12 +13,12 @@
 <body>
     <main class="container">
             <h1>Faça seu login</h1> 
-            <form id="formLogin" action="http://localhost:8080/usuario/validar">
+            <form id="formLogin" action="http://localhost:8080/usuario/login" method="post">
                     <label id="lbEmail">Email</label>
-                    <input id="email" type="text">
+                    <input id="email" type="text" name="email">
                    
                     <label id="lbSenha">Senha</label>
-                    <input id="senha" type="password">
+                    <input id="senha" type="password" name="senha">
                
                 <span>Não tem uma conta? <a href="http://localhost:8080/usuario/cadastro" target="_self">Cadastre-se</a></span>
                 <button id="btnEntrar" type="submit" class="btn waves-effect waves-light">Entrar</button>  

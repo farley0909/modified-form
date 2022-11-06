@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <base href="/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/inicio.css">
+</head>
+<body>
+    <div id="Conteudo-principal" class="container">
+        <h1>Suas pesquisa</h1>
+        <div id="pesquisas" class="container">     
+        </div>
+        <a  id="btnModal" class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">add</i></a>
+    </div>
+    <div id="fade">       
+    </div>
+    <div id="modal" class="container">
+        <div id="modal-content">
+            <h1>Registre sua pergunta</h1>
+            <div class="input-field col s6" id="form">
+                <input placeholder="Pergunta" id="pergunta" type="text" class="validate">
+                
+            </div>
+            <div id="modal-buttons">
+                <a id="btnCancelar" class="waves-effect waves-light btn-small"><i class="material-icons right">delete</i>Cancelar</a>
+                <a id="btnSalvar" class="waves-effect waves-light btn-small"><i class="material-icons right">add</i>Salvar</a>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/inicio.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@ import { uuid } from 'uuidv4';
 import bcrypt from 'bcrypt'
 export class cadastroModel{
     private id:string
+    private dataCriacao:string
     constructor(
         private conta_ativa:boolean,
         private nome:string,
@@ -17,6 +18,11 @@ export class cadastroModel{
         }else{
             this.id =id
         }
+        this.dataCriacao = new Date().toLocaleString();
+    }
+    public getDataCriacao():string{
+        
+        return this.dataCriacao
     }
     public getConta_Ativa(): boolean{
         return this.conta_ativa

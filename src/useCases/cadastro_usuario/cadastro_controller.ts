@@ -22,7 +22,8 @@ export class cadastroController{
                 cidade: this.usModel.getCidade(),
                 estado: this.usModel.getEstado(),
                 telefone: this.usModel.getTelefone(),
-                conta_Ativa: this.usModel.getConta_Ativa()
+                conta_Ativa: this.usModel.getConta_Ativa(),
+                data_criacao: this.usModel.getDataCriacao()
             }
         })
         await this.sendEmail()
@@ -60,6 +61,14 @@ export class cadastroController{
             where: {id:id},
             data:{conta_Ativa:true}
         })
+    }
+    async getOneUser(email){
+        const user = await prisma.usuarios.findFirst({
+            where:{
+                email:email
+            }
+        })
+        return user
     }
       
 }
