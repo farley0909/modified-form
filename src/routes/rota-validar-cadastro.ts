@@ -7,7 +7,6 @@ let rota_validar_cadastro= Router()
 rota_validar_cadastro.post("/usuario/cadastro/validar/", async (req:Request, res:Response)=>{
     const {nome, email, senha, cidade, estado, telefone} = req.body
     let usModel = new cadastroModel( false, nome, senha, email, estado, cidade, telefone)
-    console.log(usModel)
     let usController = new cadastroController(usModel)
     usController.salvar()
     res.sendFile(path.join(__dirname,'../public/dados_recebidos.html'))

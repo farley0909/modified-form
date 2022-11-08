@@ -5,7 +5,6 @@ let rota_pesquisas = Router()
 
 rota_pesquisas.get('/pesquisas/:token', async (req, res)=>{
     let token = req.params.token
-    console.log(token)
     let pesquisaC =  new pesquisaController()
     try {
         let user = jwt.verify(token, process.env.JWT_SECRET)

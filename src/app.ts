@@ -13,7 +13,7 @@ import { rota_validar_login } from './routes/rota-validar-login'
 import { rota_questionairos } from './routes/rota-questionarios'
 import { rota_inicio } from './routes/rota-inicio'
 import { rota_pesquisas } from './routes/rota-pesquisas'
-
+import { rota_getPesquisador } from './routes/rota-getPesquisador'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -35,6 +35,6 @@ app.use(rota_validar_login)
 app.use(rota_questionairos)
 app.use(rota_inicio)
 app.use(rota_pesquisas)
-
+app.use(rota_getPesquisador)
 //Exportando app
 export {app}

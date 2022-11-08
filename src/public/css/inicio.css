@@ -1,6 +1,14 @@
 #Conteudo-principal {
-display: block;
- padding: 10px;
+    display: block;
+    padding: 10px;
+   
+    width: 80vw;
+}
+.nomeUsuario {
+   font-size: 14pt;
+}
+.nomeUsuario i{
+
 }
 #Conteudo-principal h1{
     text-align: center;
@@ -13,7 +21,8 @@ display: block;
     max-height: 50vh;
 }
 #btnModal {
-   margin-left: 85%;
+    margin-top: 2%;
+   margin-left: 80%;
 }
 #fade{
     display: none;
@@ -39,7 +48,7 @@ display: block;
 #modal-content{
 }
 #modal-buttons {
-    margin-left: 30%;
+    margin-left: 35%;
 }
 #modal-content input{
 

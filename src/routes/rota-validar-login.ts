@@ -23,7 +23,7 @@ rota_validar_login.post("/usuario/login", async (req, res)=>{
 
 async function validarLogin(email, senha){
     const usController = new cadastroController()
-    let userFromBD  = await usController.getOneUser(email)
+    let userFromBD  = await usController.getOneUserByEmail(email)
     if(userFromBD != null){
        let senhaVerifica = await bcrypt.compare(senha, userFromBD.senha)
         if((userFromBD.email).match(email) && senhaVerifica && userFromBD.conta_Ativa){

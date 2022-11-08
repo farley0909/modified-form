@@ -37,6 +37,7 @@ btn.addEventListener('submit', async ()=>{
             }
         })
         let res = await req.json()
+        console.log(res)
         if(res.message!=false){
             location.href=`http://localhost:8080/inicio/${res.message}` 
         }else{

@@ -62,7 +62,15 @@ export class cadastroController{
             data:{conta_Ativa:true}
         })
     }
-    async getOneUser(email){
+    async getOneUser(id){
+        const user = await prisma.usuarios.findFirst({
+            where:{
+                id:id
+            }
+        })
+        return user
+    }
+    async getOneUserByEmail(email){
         const user = await prisma.usuarios.findFirst({
             where:{
                 email:email

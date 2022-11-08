@@ -7,7 +7,6 @@ let rota_questionairos= Router()
 
 rota_questionairos.post('/pesquisas/cadastro/:token', async (req, res)=>{
     const { questao } = req.body
-    console.log()
     let token = req.params.token
     let idUsuario
     try {
