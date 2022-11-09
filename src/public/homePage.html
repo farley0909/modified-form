@@ -36,6 +36,22 @@
             </div>
         </div>
     </div>
-    <script src="./scripts/inicio.js"></script>
+    <div id="moodal-dashboard" class="container">
+       <h1>Informações da pesquisa</h1>
+       <div id="dashboard-content">
+        <p><h3>Pesquisa:</h3><span id="pesquisa_dashboard">Qual seu nome?</span></p>
+            <div id="copyResearch">
+                <h3>Link do questionário: </h3>
+                <input id="linkResearch" type="text" value="http://localhost:8080/usuario"/><a id="btnCopyLink" class="waves-effect waves-light btn-small"><i class="material-icons">content_copy</i></a>
+            </div>
+            <p><h3>data de criação:</h3> <span id="research_date">20/20/2001</span></p>
+            <p><h3>Quantidade de respostas:</h3><span id="research_responseCount">0</span></p>
+       </div>
+        <div id="modal-buttons">
+            <a id="btnClosheDashboard" class="waves-effect waves-light btn-small"><i class="material-icons right">close</i> Fechar</a>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/homePage.js"></script>
 </body>
 </html>

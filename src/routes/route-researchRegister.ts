@@ -3,9 +3,9 @@ import { pesquisaModel } from "../useCases/cadastroPesquisa/pesquisaModel";
 import jwt from 'jsonwebtoken'
 import { pesquisaController } from "../useCases/cadastroPesquisa/pesquisaController";
 
-let rota_questionairos= Router()
+let route_researchRegister= Router()
 
-rota_questionairos.post('/pesquisas/cadastro/:token', async (req, res)=>{
+route_researchRegister.post('/pesquisas/cadastro/:token', async (req, res)=>{
     const { questao } = req.body
     let token = req.params.token
     let idUsuario
@@ -20,4 +20,4 @@ rota_questionairos.post('/pesquisas/cadastro/:token', async (req, res)=>{
     res.json({cadastrado:'cadastrou'})
     
 })
-export { rota_questionairos }
+export { route_researchRegister }

@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { cadastroController } from "../useCases/cadastro_usuario/cadastro_controller";
+import { cadastroController } from "../useCases/User/cadastro_controller";
 import jwt from 'jsonwebtoken'
 import path from 'path'
 
-let rota_ativar_conta = Router()
+let route_activeAccount = Router()
 
-rota_ativar_conta.get("/confirmar/:idEncriptado", async (req, res)=>{
+route_activeAccount.get("/confirmar/:idEncriptado", async (req, res)=>{
     const idEncriptado = req.params.idEncriptado
     let usController =  new cadastroController()
         try {
@@ -23,4 +23,4 @@ rota_ativar_conta.get("/confirmar/:idEncriptado", async (req, res)=>{
             res.send("Token inválido!")
         }   
 })
-export {rota_ativar_conta}
+export {route_activeAccount}

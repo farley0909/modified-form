@@ -1,9 +1,9 @@
 import { Router } from "express";
 import jwt from 'jsonwebtoken'
-import { cadastroController } from "../useCases/cadastro_usuario/cadastro_controller";
-const rota_getPesquisador= Router()
+import { cadastroController } from "../useCases/User/cadastro_controller";
+const route_getUserInfo= Router()
 
-rota_getPesquisador.get("/usuario/info/:token", async (req, res)=>{
+route_getUserInfo.get("/usuario/info/:token", async (req, res)=>{
     let token = req.params.token
     let usuarioController = new cadastroController()
     try {
@@ -22,4 +22,4 @@ rota_getPesquisador.get("/usuario/info/:token", async (req, res)=>{
         console.log(error)
     }
 })
-export {rota_getPesquisador}
+export {route_getUserInfo}

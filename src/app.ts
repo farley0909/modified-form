@@ -5,15 +5,15 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import cookieParser from 'cookie-parser'
 //Importando Rotas
-import { rota_cadastro_usuario } from './routes/rota-cadastro-usuario'
-import { rota_validar_cadastro } from './routes/rota-validar-cadastro'
-import { rota_ativar_conta } from './routes/rota-ativar-conta'
-import { rota_login_usuario } from './routes/rota-login-usuario'
-import { rota_validar_login } from './routes/rota-validar-login'
-import { rota_questionairos } from './routes/rota-questionarios'
-import { rota_inicio } from './routes/rota-inicio'
-import { rota_pesquisas } from './routes/rota-pesquisas'
-import { rota_getPesquisador } from './routes/rota-getPesquisador'
+import { route_UserRegisterPage } from './routes/route-UserRegisterPage'
+import { route_validateUserRegister } from './routes/route-validateUserRegister'
+import { route_activeAccount } from './routes/route-activeAccount'
+import { route_loginPage } from './routes/route-loginPage'
+import { route_validateLogin } from './routes/route-validateLogin'
+import { route_researchRegister } from './routes/route-researchRegister'
+import { route_homePage } from './routes/route-homePage'
+import { route_getResearchs } from './routes/route-getResearchs'
+import { route_getUserInfo } from './routes/route-getUserInfo'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -27,14 +27,14 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(express.json())
 app.use(express.static(path.join(__dirname,'public')))
-app.use(rota_cadastro_usuario)
-app.use(rota_validar_cadastro)
-app.use (rota_ativar_conta)
-app.use(rota_login_usuario) 
-app.use(rota_validar_login)
-app.use(rota_questionairos)
-app.use(rota_inicio)
-app.use(rota_pesquisas)
-app.use(rota_getPesquisador)
+app.use(route_UserRegisterPage)
+app.use(route_validateUserRegister)
+app.use (route_activeAccount)
+app.use(route_loginPage) 
+app.use(route_validateLogin)
+app.use(route_researchRegister)
+app.use(route_homePage)
+app.use(route_getResearchs)
+app.use(route_getUserInfo)
 //Exportando app
 export {app}

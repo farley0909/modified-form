@@ -1,13 +1,13 @@
 import { Request, Router } from "express";
 import { resolve } from "path";
-import { cadastroController } from "../useCases/cadastro_usuario/cadastro_controller";
-import { rota_login_usuario } from "./rota-login-usuario";
+import { cadastroController } from "../useCases/User/cadastro_controller";
+import { route_loginPage } from "./route-loginPage";
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
-const rota_validar_login = Router()
+const route_validateLogin = Router()
 
-rota_validar_login.post("/usuario/login", async (req, res)=>{
+route_validateLogin.post("/usuario/login", async (req, res)=>{
     const {email, senha} = req.body
     let valida = await validarLogin(email, senha)
     if(valida!= false){
@@ -38,4 +38,4 @@ async function validarLogin(email, senha){
 
 
 
-export {rota_validar_login}
+export {route_validateLogin}
