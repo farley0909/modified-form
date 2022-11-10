@@ -14,6 +14,7 @@ import { route_researchRegister } from './routes/route-researchRegister'
 import { route_homePage } from './routes/route-homePage'
 import { route_getResearchs } from './routes/route-getResearchs'
 import { route_getUserInfo } from './routes/route-getUserInfo'
+import { route_responsePage } from './routes/route-responsePage'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -36,5 +37,6 @@ app.use(route_researchRegister)
 app.use(route_homePage)
 app.use(route_getResearchs)
 app.use(route_getUserInfo)
+app.use(route_responsePage)
 //Exportando app
 export {app}

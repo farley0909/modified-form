@@ -11,7 +11,7 @@ route_getResearchs.get('/pesquisas/:token', async (req, res)=>{
         let pesquisas = await pesquisaC.getAllpesquisa(user.id)
         res.json({pesquisas: pesquisas})
     } catch (error) {
-        console.log("Houve um erro na rota de envio das pesqusias: ", error.message)
+        res.json({pesquisa:error.message})
     }
     
     
