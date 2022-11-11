@@ -25,6 +25,7 @@
     </div>
     <div id="modal" class="container">
         <div id="modal-content">
+            
             <h1>Registre sua pergunta</h1>
             <div class="input-field col s6" id="form">
                 <input placeholder="Pergunta" id="pergunta" type="text" class="validate">
@@ -37,15 +38,35 @@
         </div>
     </div>
     <div id="moodal-dashboard" class="container">
-       <h1>Informações da pesquisa</h1>
-       <div id="dashboard-content">
-        <p><h3>Pesquisa:</h3><span id="pesquisa_dashboard">Qual seu nome?</span></p>
-            <div id="copyResearch">
-                <h3>Link do questionário: </h3>
-                <input disabled id="linkResearch" type="text" /><a id="btnCopyLink" class="waves-effect waves-light btn-small"><i class="material-icons">content_copy</i></a>
-            </div>
-            <p><h3>data de criação:</h3> <span id="research_date"></span></p>
-            <p><h3>Quantidade de respostas:</h3><span id="research_responseCount">0</span></p>
+       
+        <div id="dashboard-content">
+            <nav id="tabsNav">
+                <ul id="ulTabs">
+                    <li><a href="#" id="tabPerguntas" class="selecionado">Perguntas</a></li>
+                    <li><a href="#" id="tabRespostas" >Respostas</a></li>
+                    <li><a href="#" id="tabConfig">Configurações</a></li>
+                </ul>
+            </nav>
+            <table>
+                  <tbody>
+                    <tr>
+                        <td>Pesquisa:</td>
+                        <td><span id="pesquisa_dashboard">Qual seu nome?</span></td>
+                    </tr>
+                    <tr>
+                        <td>Link do questionário:</td>
+                        <td><input disabled id="linkResearch" type="text"/><a id="btnCopyLink" class="waves-effect waves-light btn-small"><i class="material-icons">content_copy</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>data de criação:</td>
+                        <td><span id="research_date"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade de respostas:</td>
+                        <td><span id="research_responseCount">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
        </div>
         <div id="modal-buttons">
             <a id="btnClosheDashboard" class="waves-effect waves-light btn-small"><i class="material-icons right">close</i> Fechar</a>

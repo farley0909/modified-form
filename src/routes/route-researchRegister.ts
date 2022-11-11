@@ -12,7 +12,7 @@ route_researchRegister.post('/pesquisas/cadastro/:token', async (req, res)=>{
     try {
         idUsuario = await jwt.verify(token, process.env.JWT_SECRET)
     } catch (error) {
-        console.log('houve um erro: ', error)
+        console.log('houve um erro: ', error.message)
     }
     let pesquisaM  = new pesquisaModel(idUsuario.id, questao)
     let pesquisaC = new pesquisaController(pesquisaM)

@@ -5,10 +5,6 @@ async function sendResearch(token){
     let pesquisa = document.getElementById('pergunta').value
     try{
         let ul = document.getElementsByClassName('collection')
-        let a = document.createElement('a')
-        a.classList.add('collection-item')
-        a.innerHTML=""+pesquisa
-        ul[0].appendChild(a)
             try {
                 let request = await fetch(`http://localhost:8080/pesquisas/cadastro/${token}`, {
                     method: 'POST',
