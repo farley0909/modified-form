@@ -26,6 +26,7 @@ model Pesquisa {
   questao      String
   data_criacao String
   autorId      String
+  respondivel  Boolean
   autor        Usuarios   @relation(fields: [autorId], references: [id])
   Resposta     Resposta[]
 }

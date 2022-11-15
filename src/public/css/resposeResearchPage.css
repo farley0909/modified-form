@@ -4,24 +4,71 @@
     margin-left: 17%;
 }
 #main-content {
+    text-align: center;
+    
+}
+#obsNotas {
+ 
+    text-align: justify;
+}
+#questaPesquisa {
+    font-size: 22pt;
+    font-weight: 300;
+}
+#modal-nota {
+    display: none;
+    text-align: justify;
+    margin-bottom: 10%;
+}
+#modal-nota {
    
 }
-
-#questaPesquisa {
-    font-size: 24pt;
-    font-weight: 300;
-    margin-left: 40%;
+.lblNotas {
+    min-width: 80%;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 #modal {
+    display: block;
     border: 2%;
     padding: 2%;
-    min-height: 70vh;
+
     margin-top: 5%;
     text-align: center;
 }
 #modal h3{
     font-weight: 400;
     
+}
+.invalido {
+    color:rgb(165, 57, 57);
+}
+#notas-vazias {
+    display: none;
+    color:rgb(165, 57, 57);
+}
+
+#modal-justificativa {
+    display: none;
+}
+#btnProximoNota {
+    display: inline-block;
+    margin-top: 8%;
+    margin-left: 2%;
+}
+#btnProximoJustificativa {
+    margin-left: 2%;
+}
+#btnVoltarNota {
+    display: inline-block;
+    margin-left: 35%;
+    margin-top: 8%;
+}
+.materialize-textarea {
+    min-height: 30vh;
+    max-height: 30vh;
 }
 #modal label {
     display: block;
@@ -36,7 +83,16 @@
 #resposta3 {
     width: 40%;
 }
+#justificativa1 {
+    width: 40%;
+}
+#justificativa2 {
+    width: 40%;
+}
+#justificativa3 {
+    width: 40%;
+}
 #btnProximo {
-    margin-top: 0%;
-    margin-left: 45%;
+    display: inline-block;
+    margin-bottom: 2%;
 }

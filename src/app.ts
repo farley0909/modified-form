@@ -15,6 +15,10 @@ import { route_homePage } from './routes/route-homePage'
 import { route_getResearchs } from './routes/route-getResearchs'
 import { route_getUserInfo } from './routes/route-getUserInfo'
 import { route_responsePage } from './routes/route-responsePage'
+import { route_removeResearch } from './routes/route-removeResearch'
+import { route_getResearchById } from './routes/route-getResearchById'
+import { route_pesquisaRespondivel } from './routes/route-pesquisaRespondivel'
+import { route_respostaCadastro } from './routes/route-respostaCadastro'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -38,5 +42,9 @@ app.use(route_homePage)
 app.use(route_getResearchs)
 app.use(route_getUserInfo)
 app.use(route_responsePage)
+app.use(route_removeResearch)
+app.use(route_getResearchById)
+app.use(route_pesquisaRespondivel)
+app.use(route_respostaCadastro)
 //Exportando app
 export {app}

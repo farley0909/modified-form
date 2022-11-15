@@ -4,6 +4,7 @@
    
     width: 80vw;
 }
+
 .nomeUsuario {
    font-size: 14pt;
 }
@@ -55,7 +56,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5%;
+   
 }
 #linkResearch {
     display: inline;
@@ -77,11 +78,23 @@
     border-bottom: 4px solid #5fc2ab;
    
 }
-#ulTabs li {
 
+#dashboard-perguntas {
+    display: block;
+}
+#dashboard-respostas {
+    display: none;
+}
+#dashboard-config {
+    display: none;
 }
 #ulTabs  {
    margin-left: 30%;
+}
+#dashboard-content {
+   padding: 2%;
+   min-height: 55vh;
+   max-height: 55vh;
 }
 #dashboard-content h3{
     font-size: 14pt;
@@ -96,7 +109,7 @@
     margin-bottom: 8%;
 }
 #modal-buttons {
-    margin-top: 10%;
+  
     margin-left: 45%;
 }
 #modal-content h1{

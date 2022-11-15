@@ -38,16 +38,15 @@
         </div>
     </div>
     <div id="moodal-dashboard" class="container">
-       
+        <nav id="tabsNav">
+            <ul id="ulTabs">
+                <li><a  id="tabPerguntas" class="selecionado">Perguntas</a></li>
+                <li><a  id="tabRespostas" >Respostas</a></li>
+                <li><a  id="tabConfig">Configurações</a></li>
+            </ul>
+        </nav>
         <div id="dashboard-content">
-            <nav id="tabsNav">
-                <ul id="ulTabs">
-                    <li><a href="#" id="tabPerguntas" class="selecionado">Perguntas</a></li>
-                    <li><a href="#" id="tabRespostas" >Respostas</a></li>
-                    <li><a href="#" id="tabConfig">Configurações</a></li>
-                </ul>
-            </nav>
-            <table>
+            <table id="dashboard-perguntas">
                   <tbody>
                     <tr>
                         <td>Pesquisa:</td>
@@ -66,6 +65,30 @@
                         <td><span id="research_responseCount">0</span></td>
                     </tr>
                 </tbody>
+            </table>
+
+            <table id="dashboard-config">
+                <tbody>
+                    <tr>
+                        <td>Receber respostas? :</td>
+                        <td>  <div class="switch">
+                            <label>
+                              Desligado
+                              <input id="switchRespondivel" type="checkbox" >
+                              <span class="lever"></span>
+                              Ligado
+                            </label>
+                          </div></td>
+                    </tr>
+                    <tr>
+                        <td>Excluir pesquisa :</td>
+                        <td><a id="btnDeletaPesquisa" class="waves-effect waves-light btn-small red"><i class="material-icons right">delete</i>Apagar</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <table id="dashboard-respostas">
+                
             </table>
        </div>
         <div id="modal-buttons">

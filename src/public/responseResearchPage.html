@@ -13,18 +13,143 @@
 </head>
 <body>
     <div class="container" id="main-content">
-        <p><span id="questaPesquisa">Qual seu nome?</span></p>
+        <p><span id="questaPesquisa"></span></p>
         <div id="modal" class="container">
-            <span id="tituloInstrucao">Insira três respostas para pergunta feita</span>
-            <label>Resposta 1</label>
-            <input type="text" id="resposta1">
-            <label>Resposta 2</label>
-            <input type="text" id="resposta2">
-            <label>Resposta 3</label>
-            <input type="text" id="resposta3">
+            <span id="tituloInstrucao">Descreva até 3 motivos para o questionamento:</span>
+            <label for="textarea1">Resposta 1</label>
+            <textarea id="resposta1" class="materialize-textarea" ></textarea>
+            <label for="textarea1">Resposta 2</label>
+            <textarea id="resposta2" class="materialize-textarea"></textarea>
+            <label for="textarea1">Resposta 3</label>
+            <textarea id="resposta3" class="materialize-textarea"></textarea> 
+            <p> <a id="btnProximo" class="waves-effect waves-light btn-small"><i class="material-icons right">arrow_forward</i>Próximo</a></p>
+           
         </div>
-        <a id="btnProximo" class="waves-effect waves-light btn-small"><i class="material-icons right">arrow_forward</i>Próximo</a>
-        <script src="./scripts/reponseResearchPage.js"></script>
+        <div id="modal-nota">
+            
+            <p><span id="tituloInstrucao">Para cada motivo ou objetivo na pergunta 1, favor indicar o quanto nosso produto ou serviço atendeu suas expectativas. Por favor avalie separadamente, dando uma nota usando a seguinte escala:</span>
+              <ul id="obsNotas">
+                <li>5 - superada (Recebi mais do que eu esperava)</li>
+                <li>4 - plenamente atendida (Recebi tudo o que esperava)</li>
+                <li>3 - Atendida em grande parte (Coisas de pouca importância ficaram faltando)</li>
+                <li>2 - Parcialmente (Coisas Relevantes não foram atendidas)</li>
+                <li>1 - Pouco (A maioria das minhas expectativas não foram atendidas)</li>
+                <li>0 - Nada (Nenhuma das necessidades foi atendida)</li>
+              </ul>
+          
+            </p>
+            <p>
+              <div class="lblNotas">
+                <span id="nota-resposta1" >O que voce acha?</span>
+              </div>
+              <label>
+                <input class="group1" name="group1" type="radio"  value="0" />
+                <span>0</span>
+              </label>
+                <label>
+                  <input class="group1" name="group1" type="radio" value="1"  />
+                  <span>1</span>
+                </label>
+              <label>
+                <input class="group1" name="group1" type="radio" value="2" />
+                <span>2</span>
+              </label>
+              <label>
+                <input class="group1" name="group1" type="radio" value="3"  />
+                <span>3</span>
+              </label>
+              <label>
+                <input class="group1" name="group1" type="radio" value="4" />
+                <span>4</span>
+              </label>
+              <label>
+                <input class="group1" name="group1" type="radio" value="5" />
+                <span>5</span>
+              </label>
+            </p>
+            <p>
+              <div class="lblNotas">
+                <span id="nota-resposta2" >O que voce acha?</span>
+              </div>
+              <label>
+                <input class="group2" name="group2" type="radio"  value="0"/>
+                <span>0</span>
+              </label>
+                <label>
+                  <input class="group2" name="group2" type="radio" value="1"  />
+                  <span>1</span>
+                </label>
+              <label>
+                <input  class="group2" name="group2" type="radio" value="2" />
+                <span>2</span>
+              </label>
+              <label>
+                <input class="group2" name="group2" type="radio" value="3" />
+                <span>3</span>
+              </label>
+              <label>
+                <input class="group2" name="group2" type="radio" value="4" />
+                <span>4</span>
+              </label>
+              <label>
+                <input class="group2" name="group2" type="radio" value="5" />
+                <span>5</span>
+              </label>
+            </p>
+            <p>
+              <div class="lblNotas">
+                <span id="nota-resposta3">O que voce acha?</span>
+              </div>
+              <label>
+                <input class="group3" name="group3" type="radio"  value="0"/>
+                <span>0</span>
+              </label>
+                <label>
+                  <input class="group3" name="group3" type="radio"  value="1"/>
+                  <span>1</span>
+                </label>
+              </label>
+              <label>
+                <input class="group3" name="group3" type="radio" value="2"/>
+                <span>2</span>
+              </label>
+              <label>
+                <input class="group3" name="group3" type="radio" value="3" />
+                <span>3</span>
+              </label>
+              <label>
+                <input class="group3" name="group3" type="radio"  value="4"/>
+                <span>4</span>
+              </label>
+              <label>
+                <input class="group3" name="group3" type="radio"  value="5"/>
+                <span>5</span>
+              </label>
+            </p>
+            <span id="notas-vazias">Um dos campos esta vazio</span>
+            <p><a id="btnVoltarNota" class="waves-effect waves-light btn-small"><i class="material-icons left">arrow_back</i>Voltar</a><a id="btnProximoNota" class="waves-effect waves-light btn-small"><i class="material-icons right">arrow_forward</i>Próximo</a></p>
+        </div>
+       <div id="modal-justificativa">
+            <div id="InstrucaoJustificativa">
+              <p><spa id="tituloInstrucao">Pode nos contar o motivo de cada nota dada?</span></p>
+              <p>
+                <p>  <span id="justificativa-resposta1">O que voce acha?</span></p>
+              
+                <textarea id="justificativa1" class="materialize-textarea"></textarea>
+              </p>
+              <p>
+                <p><span id="justificativa-resposta2">O que voce acha?</span></p>
+                <textarea id="justificativa2" class="materialize-textarea"></textarea>
+              </p>
+              <p>
+                <p><span id="justificativa-resposta3">O que voce acha?</span></p>
+                <textarea id="justificativa3" class="materialize-textarea"></textarea>
+              </p>
+              <p><a id="btnVoltarJustificativa" class="waves-effect waves-light btn-small"><i class="material-icons left">arrow_back</i>Voltar</a><a id="btnProximoJustificativa" class="waves-effect waves-light btn-small"><i class="material-icons right">arrow_forward</i>Enviar</a></p>
+            </div>
+
+       </div>
+        <script type="module" src="./scripts/reponseResearchPage.js"></script>
     </div>
 </body>
 </html>

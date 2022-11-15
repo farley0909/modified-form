@@ -14,7 +14,8 @@ export class pesquisaController{
             id: this.pesquisaModel.getId(),
             questao:this.pesquisaModel.getPesquisa(),
             autorId:this.pesquisaModel.getAutor(),
-            data_criacao: this.pesquisaModel.getDataCriacao()
+            data_criacao: this.pesquisaModel.getDataCriacao(),
+            respondivel: this.pesquisaModel.getRespondivel()
         }
        })
 
@@ -25,6 +26,7 @@ export class pesquisaController{
                 id:id
             }
         })
+        console.log(pesquisa)
         return pesquisa
     }
     async getAllpesquisa(id){
@@ -33,8 +35,43 @@ export class pesquisaController{
                 autorId:id
             }
         })
+
         return pesquisas
     }
-
-
+    async deletaPesquisa(id:string) {
+        try {
+            await prisma.pesquisa.delete({
+                where:{
+                    id:id
+                }
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    async pesquisaRespondivel(id:string){
+        let res = await prisma.pesquisa.findFirst({
+            where:{
+                id:id
+            }
+        })
+        if(res.respondivel){
+            await prisma.pesquisa.update({
+                where:{
+                    id:id
+                },data:{
+                   respondivel:false 
+                }
+            })
+        }else{
+            await prisma.pesquisa.update({
+                where:{
+                    id:id
+                },data:{
+                   respondivel:true 
+                }
+            })  
+        }
+    
+    }
 }
