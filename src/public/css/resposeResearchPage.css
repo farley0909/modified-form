@@ -11,7 +11,20 @@
  
     text-align: justify;
 }
+#modal-PesquisaNaoRespondivel {
+    display: none;
+    margin-top: 10%;
+    padding: 10%;
+    text-align: center;
+}
+#modal-PesquisaNaoRespondivel h2 {
+    color:#21715e;
+    text-align: center;
+    font-size: 22pt;
+    font-weight: 300;
+}
 #questaPesquisa {
+    display: block;
     font-size: 22pt;
     font-weight: 300;
 }
@@ -44,6 +57,17 @@
 }
 .invalido {
     color:rgb(165, 57, 57);
+}
+#modal-PesquisaConcluida {
+    display: none;
+    margin-top: 15%;
+    padding: 10%;
+}
+#modal-PesquisaConcluida h2 {
+    color:#21715e;
+    text-align: center;
+    font-size: 22pt;
+    font-weight: 300;
 }
 #notas-vazias {
     display: none;

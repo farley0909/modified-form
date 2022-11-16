@@ -14,6 +14,7 @@ import { showConfigTab } from "./homePageModules/showConfigTab.js"
 import { showPerguntasTab } from "./homePageModules/showPerguntasTab.js"
 import { showRespostasTab } from "./homePageModules/showRespostasTab.js"
 
+const btnCloseRespostaDados = document.getElementById('btnCloseRespostaDados') 
 const btnModal = document.getElementById('btnModal') 
 const btnCancelar = document.getElementById('btnCancelar') 
 const btnSalvar = document.getElementById('btnSalvar')
@@ -27,6 +28,9 @@ const switchRespondivel = document.getElementById("switchRespondivel")
 let respondivel = true
 switchRespondivel.addEventListener("click", ()=>{
    setRespondivel()
+})
+btnCloseRespostaDados.addEventListener('click', ()=>{
+    document.getElementById("modal-respostasDados").style.display="none"
 })
 btnCopy.addEventListener('click', copy)
 btnDeletaPesquisa.addEventListener('click', removePesquisa )

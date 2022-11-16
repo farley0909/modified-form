@@ -19,7 +19,10 @@ async function enviaResposta(notas, respostas, justificativas, pesquisa){
             body: JSON.stringify(data)
         })
         let res = await req.json()
-        console.log(res)
+        document.getElementById('modal-PesquisaConcluida').style.display="block"
+        document.getElementById('questaPesquisa').style.display="none"
+        document.getElementById('modal-justificativa').style.display="none"
+
     } catch (error) {
        console.log(error.message) 
     }

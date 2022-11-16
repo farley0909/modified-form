@@ -45,6 +45,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 5%;
+    text-align: center;
 }
 #moodal-dashboard {
     min-height: 80vh;
@@ -56,6 +57,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
    
 }
 #linkResearch {
@@ -81,6 +83,7 @@
 
 #dashboard-perguntas {
     display: block;
+    
 }
 #dashboard-respostas {
     display: none;
@@ -95,6 +98,7 @@
    padding: 2%;
    min-height: 55vh;
    max-height: 55vh;
+   text-align: center;
 }
 #dashboard-content h3{
     font-size: 14pt;
@@ -108,10 +112,7 @@
     font-weight: 300;
     margin-bottom: 8%;
 }
-#modal-buttons {
-  
-    margin-left: 45%;
-}
+
 #modal-content h1{
     text-align: center;
     font-size: 24pt;
@@ -121,8 +122,27 @@
     border-bottom: 4px solid #5fc2ab;
     background-color: #1b776e;
 }
-#btnCopyLink{
-    
+#bodyRespostas {
+    width: 100%;
+    background-color: #5fc2ab;
+    text-align: center;
+}
+#pesquisaSemRespostas {
+    display: none;
+    font-size: 24pt;
+    font-weight: 300;
+    opacity: 0.6;
+}
+#listaRespostas a{
+    cursor: pointer;
+}
+#dashboard-respostas {
+    width: 80%;
+    margin: auto;
+    margin:auto; /* Centraliza sua tabela */
+}
+#dashboard-respostas {
+   text-align: center;
 }
 #form {
     width: 60%;
@@ -131,6 +151,33 @@
 }
 #tableTitulo {
     font-weight: 300;
-    margin-left: 35%;
-    
+    margin-left: 35%;   
+}
+#listaPesquisas a {
+    cursor: pointer;
+}
+#modal-respostasDados {
+    min-height: 80vh;
+    max-height: 80vh;
+    min-width: 80vw;
+    max-width: 80vw;
+    display: none;
+    z-index: 20;
+    overflow-y: scroll;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 5%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#modal-respostasDados h2 {
+    font-weight: 300;
+    font-size: 22pt;
+}
+#tbDadosRespostas {
+    width: 50%;
+   margin-left: 28%;
+   margin-right: auto;
 }

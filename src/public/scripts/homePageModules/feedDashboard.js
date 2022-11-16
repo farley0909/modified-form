@@ -1,5 +1,6 @@
 import { getResearchs } from "./getResearchs.js"
 import { getToken } from "./getToken.js"
+import { insereRespostas } from "./insereRespostas.js";
 
 async function feedDashboard(research){
     let token = getToken()
@@ -12,6 +13,7 @@ async function feedDashboard(research){
             pesquisa_dashboard.innerHTML=" "+el.questao
             let link = document.getElementById('linkResearch')
             link.value="http://localhost:8080/resposta/"+el.id
+            getRespostas(el.id, token)
             if(el.respondivel){
                 document.getElementById('switchRespondivel').checked = true;
                 
@@ -23,4 +25,28 @@ async function feedDashboard(research){
 
 }
 
+
+
+
+async function getRespostas(id, token){
+   
+    try {
+        let data = {
+             id:id
+        }
+        let req = await fetch("http://localhost:8080/respostas/listar/"+token,  {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        let res = await req.json()
+        console.log(res.respostas)
+        insereRespostas(res.respostas)
+    } catch (error) {
+        console.log('error ao pegar as respsotas', error.message)
+    }
+}
 export { feedDashboard }

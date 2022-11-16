@@ -28,7 +28,14 @@ class responseController {
         })
         console.log(res)
     }
-
+    async getAllRespostas(id:string){
+        let res = await prisma.resposta.findMany({
+            where:{
+                pesquisaId:id
+            }
+        })
+        return res
+    }
 /* id             String   @unique
   resposta1      String
   resposta2      String

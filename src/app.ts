@@ -19,6 +19,7 @@ import { route_removeResearch } from './routes/route-removeResearch'
 import { route_getResearchById } from './routes/route-getResearchById'
 import { route_pesquisaRespondivel } from './routes/route-pesquisaRespondivel'
 import { route_respostaCadastro } from './routes/route-respostaCadastro'
+import { route_respostasListar } from './routes/route-respostasListar'
 //Parte de middlewares
 const app = express()
 app.use((req, res, next) => {
@@ -46,5 +47,6 @@ app.use(route_removeResearch)
 app.use(route_getResearchById)
 app.use(route_pesquisaRespondivel)
 app.use(route_respostaCadastro)
+app.use(route_respostasListar)
 //Exportando app
 export {app}
