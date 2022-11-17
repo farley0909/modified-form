@@ -52,7 +52,6 @@ async function main(){
     insertUserData(dadosPesquisador)
     console.log(pesquisas.pesquisas.length)
     if(pesquisas.pesquisas.length === 0){
-        console.log("Lista vazia")
     }else{
         createList(pesquisas)
     }

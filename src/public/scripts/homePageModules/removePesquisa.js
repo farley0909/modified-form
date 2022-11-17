@@ -14,7 +14,7 @@ async function removePesquisa(){
             let compara = noSpaces.localeCompare(element.questao)
             if(compara===0){
                 try {
-                    console.log(token)
+                        console.log("Esse é o id que esta sendo enviado pra rota de remoção: ", element.id)
                         let request = await fetch(`http://localhost:8080/pesquisa/remover/${token}`, {
                         method: 'POST',
                         headers: {
@@ -24,6 +24,7 @@ async function removePesquisa(){
                         body: JSON.stringify({id: element.id})
                     })
                     let res = await request.json()
+                    console.log(res)
                     if(res.status===true){
                         apagaPesquisaLista(noSpaces)
                     }

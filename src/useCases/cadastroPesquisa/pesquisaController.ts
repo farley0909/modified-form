@@ -40,6 +40,11 @@ export class pesquisaController{
     }
     async deletaPesquisa(id:string) {
         try {
+            await prisma.resposta.deleteMany({
+                where:{
+                    pesquisaId:id
+                }
+            })
             await prisma.pesquisa.delete({
                 where:{
                     id:id
@@ -50,6 +55,7 @@ export class pesquisaController{
         }
     }
     async pesquisaRespondivel(id:string){
+       
         let res = await prisma.pesquisa.findFirst({
             where:{
                 id:id

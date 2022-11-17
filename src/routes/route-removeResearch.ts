@@ -5,6 +5,7 @@ let route_removeResearch = Router()
 
 route_removeResearch.post('/pesquisa/remover/:token', async (req, res)=>{
     let {id} = req.body
+    console.log("Esse é o id recebido: ", id)
     let pesquisa = new pesquisaController()
     try {
        await pesquisa.deletaPesquisa(id)
