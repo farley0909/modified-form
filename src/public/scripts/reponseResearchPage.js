@@ -29,7 +29,7 @@ window.addEventListener('load',async ()=>{
            let group1 =  document.querySelectorAll('.group1')
            group1.forEach(el => {
                 el.addEventListener('click', ()=>{
-                    alert("hello world")
+                    document.getElementById("campoJustificativa").style.display="block"
                 })
            })
             btnProximo.addEventListener('click', async ()=>{
@@ -56,37 +56,67 @@ window.addEventListener('load',async ()=>{
             }
                   
             })
-            btnProximoNota.addEventListener('click', ()=>{
-                notas.push(getNotas())
-                justificativas.push(getJustificativas())
-                console.log(justificativas)
-                preencheLabelJustificativa(respostas)
-                //justificativa-resposta1
-            })
-            btnProximoJustificativa.addEventListener('click', ()=>{
-                justificativas = getJustificativas()
-                console.log(justificativas)
-                enviaResposta(notas, respostas, justificativas, pesquisa)
-            })
-            btnVoltarJustificativa.addEventListener('click', ()=>{
+            btnVoltarNota.addEventListener('click', ()=>{
                 notas = []
-                document.getElementById('modal').style.display="none"
-                document.getElementById("modal-nota").style.display="block"
-                document.getElementById("modal-justificativa").style.display="none"
+                justificativas = []
+                respostas = []
+                document.getElementById("modal").style.display="block"
+                document.getElementById("modal-nota").style.display="none"
+                document.getElementById('resposta1').value=""
+                document.getElementById('resposta2').value=""
+                document.getElementById('resposta3').value=""
+            })
+            //////////////////////
+            btnProximoNota.addEventListener('click', ()=>{
+                if(justificativas.length == 0){
+                    notas.push(getNotas())
+                    justificativas.push(getJustificativas())
+                    document.getElementById("campoJustificativa").style.display="none"
+                    document.getElementById("nota-resposta").innerHTML=""+respostas[1]
+                    document.getElementById("justificativaText").value=" "
+                    let group1 = document.querySelectorAll('.group1')
+                        group1.forEach(el => {
+                            if(el.checked){
+                                el.checked=false
+                                document.getElementById("campoJustificativa").style.display="none"
+                                document.getElementById("nota-resposta").innerHTML=""+respostas[1]
+                                document.getElementById("justificativaText").value=""
+                            }
+                            
+                        })
+                }else if(justificativas.length == 1){
+                    notas.push(getNotas())
+                    justificativas.push(getJustificativas())
+                    let group1 = document.querySelectorAll('.group1')
+                        group1.forEach(el => {
+                            if(el.checked){
+                                el.checked=false
+                                document.getElementById("campoJustificativa").style.display="none"
+                                document.getElementById("nota-resposta").innerHTML=""+respostas[2]
+                                document.getElementById("justificativaText").value=""
+                            }    
+                        })
+                }else if(justificativas.length == 2){
+                    notas.push(getNotas())
+                    justificativas.push(getJustificativas())
+                    console.log("Essa daqui é a pesquisa: ", pesquisa)
+                    try {
+                        enviaResposta(notas, respostas, justificativas, pesquisa)
+                    } catch (error) {
+                        console.log(error.message)
+                    }
+                    
+                }
             })
             
-            btnVoltarNota.addEventListener('click', ()=>{
-                notas=[]
-                respostas=[]
-                document.getElementById('modal').style.display="block"
-                document.getElementById("modal-nota").style.display="none"
-            })
         }else {
             document.getElementById('modal').style.display="none"
             document.getElementById('modal-PesquisaNaoRespondivel').style.display="block"
         }
     } catch (error) {
-       // console.log(error.message)    
+    console.log(error) 
+    document.getElementById('modal').style.display="none"
+    document.getElementById('modal-PesquisaNaoRespondivel').style.display="block"   
     }
 })
 

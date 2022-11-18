@@ -23,7 +23,12 @@
     font-size: 22pt;
     font-weight: 300;
 }
-#questaPesquisa {
+#nota-resposta {
+    color:#21715e;
+    font-size: 16pt;
+   text-decoration: underline #21715e;
+}
+#questaoPesquisa {
     display: block;
     font-size: 22pt;
     font-weight: 300;
@@ -74,6 +79,13 @@
     display: none;
     margin-top: 15%;
     padding: 10%;
+}
+#modal-PesquisaNaoRespondivel {
+    display: none;
+}
+#btnCloseRespostaDados {
+    display: block;
+    margin-left: 50%;
 }
 #modal-PesquisaConcluida h2 {
     color:#21715e;

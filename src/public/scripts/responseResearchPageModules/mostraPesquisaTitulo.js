@@ -1,5 +1,5 @@
     function mostraPesquisaTitulo(pesquisa){
-        let titulo = document.getElementById("questaPesquisa")
+        let titulo = document.getElementById("questaoPesquisa")
         titulo.innerHTML=""+pesquisa.questao
     }
     export {mostraPesquisaTitulo}

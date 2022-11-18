@@ -176,8 +176,17 @@
     font-weight: 300;
     font-size: 22pt;
 }
+#nomeUsuario {
+    cursor: pointer;
+}
 #tbDadosRespostas {
-    width: 50%;
-   margin-left: 28%;
-   margin-right: auto;
+    width: 70%;
+    margin: auto;
+}
+#tbDadosRespostas th {
+   padding: 2rem;
+}
+#btnCloseRespostaDados {
+    margin-top: 5%;
+
 }

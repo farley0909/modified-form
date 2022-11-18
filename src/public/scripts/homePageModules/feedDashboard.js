@@ -43,7 +43,6 @@ async function getRespostas(id, token){
             body: JSON.stringify(data)
         })
         let res = await req.json()
-        console.log(res.respostas)
         insereRespostas(res.respostas)
     } catch (error) {
         console.log('error ao pegar as respsotas', error.message)

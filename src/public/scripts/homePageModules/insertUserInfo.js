@@ -5,11 +5,12 @@ function insertUserData(usuario){
     i.classList.add("left")
     i.classList.add("small")
     
-    i.innerHTML="account_circle"
+    i.innerHTML="perm_identity"
     let span = document.createElement('span')
     span.classList.add('nomeUsuario')
     span.innerHTML=""+usuario.nome 
     span.appendChild(i)
+    span.id = "nomeUsuario"
     content.appendChild(span)
 }
 export { insertUserData }

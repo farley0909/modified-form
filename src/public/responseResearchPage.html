@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="container" id="main-content">
-    <p><span id="questaPesquisa"></span></p>
+    <p><span id="questaoPesquisa"></span></p>
     <div id="modal" class="container">
       <span id="tituloInstrucao">Descreva até 3 motivos para o questionamento:</span>
       <label for="textarea1">Resposta 1</label>
@@ -77,7 +77,15 @@
     <span id="notas-vazias">Nenhuma opção selecionado, por favor, selecione uma antes de prosseguir.</span>
     <p id="buttonsNota"><a id="btnVoltarNota" class="waves-effect waves-light btn-small"><i class="material-icons left">arrow_back</i>Voltar</a><a id="btnProximoNota" class="waves-effect waves-light btn-small"><i class="material-icons right">arrow_forward</i>Próximo</a></p>
   </div>
-      <script type="module" src="./scripts/reponseResearchPage.js"></script>
+  <div id="modal-PesquisaConcluida" class="container z-depth-2">
+    <h2>Obrigado por responder a pesquisa!</h2>
+    <p>Sua resposta já foi salva em nossa base de dados, agradecemos pela contribuição.</p>
+  </div>
+  <div id="modal-PesquisaNaoRespondivel" class="container z-depth-2">
+    <h2>Pesquisa indisponível</h2>
+    <p>Infelizmente a pesquisa esta indisponível no momento.</p>
+  </div>
 </div>
+<script type="module" src="./scripts/reponseResearchPage.js"></script>
 </body>
 </html>

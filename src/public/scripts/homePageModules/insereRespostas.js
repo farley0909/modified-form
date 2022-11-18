@@ -4,11 +4,20 @@ function insereRespostas(respostas){
     let container = document.getElementById("dashboard-respostas")
     if(respostas.length == 0){
         document.getElementById("pesquisaSemRespostas").style.display="block"
-    }else{
         try {
             let hasUl = document.getElementById("listaRespostas")
             let childs = hasUl.childNodes
-            hasUl.parentNode.removeChild(hasUl)
+            hasUl.parentElement.removeChild(hasUl)
+        } catch (error) {
+            
+        }
+    }else{
+        try {
+        
+            document.getElementById("pesquisaSemRespostas").style.display="none"
+            let hasUl = document.getElementById("listaRespostas")
+            let childs = hasUl.childNodes
+            hasUl.parentElement.removeChild(hasUl)
         } catch (error) {
             
         }

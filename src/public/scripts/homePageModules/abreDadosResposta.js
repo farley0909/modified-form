@@ -10,6 +10,5 @@ function abreDadosResposta(resposta){
     document.getElementById("jus1Td").innerHTML=""+resposta.justificativa1
     document.getElementById("jus2Td").innerHTML=""+resposta.justificativa2
     document.getElementById("jus3Td").innerHTML=""+resposta.justificativa3
-    console.log('resposta recebida: ', resposta)
 }
 export {abreDadosResposta}

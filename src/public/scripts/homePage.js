@@ -31,6 +31,7 @@ switchRespondivel.addEventListener("click", ()=>{
 })
 btnCloseRespostaDados.addEventListener('click', ()=>{
     document.getElementById("modal-respostasDados").style.display="none"
+
 })
 btnCopy.addEventListener('click', copy)
 btnDeletaPesquisa.addEventListener('click', removePesquisa )
@@ -50,7 +51,6 @@ async function main(){
     let pesquisas =await getResearchs(token)
     let dadosPesquisador = await getUserData(token)
     insertUserData(dadosPesquisador)
-    console.log(pesquisas.pesquisas.length)
     if(pesquisas.pesquisas.length === 0){
     }else{
         createList(pesquisas)
