@@ -9,13 +9,15 @@ route_respostaCadastro.post('/respostas/cadastro/',async  (req, res)=>{
     let {notas}= req.body
     let {justificativas}= req.body
     let {idPesquisa}= req.body
+    console.log(respostas)
+    console.log(notas)
+    console.log(justificativas)
     console.log(idPesquisa)
-    let model = new responseModel(respostas,notas, justificativas, idPesquisa)
-    let controller = new responseController(model)
-    await controller.criarResposta()
-    res.json({status:'ok' })
+    let controller = new responseController()
+    await controller.createAnswer(respostas, notas, justificativas, idPesquisa)
+    res.json({status:true})
    } catch (error) {
-    
+    console.log(error)
     res.json({status:error.message})
    } 
 })

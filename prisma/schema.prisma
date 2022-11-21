@@ -9,9 +9,9 @@ datasource db {
 }
 
 model Usuarios {
-  id           String     @unique
+  id           String        @unique
   nome         String
-  email        String     @unique
+  email        String        @unique
   telefone     String
   senha        String
   estado       String
@@ -19,6 +19,7 @@ model Usuarios {
   conta_Ativa  Boolean
   data_criacao String
   Pesquisa     Pesquisa[]
+  refreshToken RefreshToken?
 }
 
 model Pesquisa {
@@ -44,4 +45,11 @@ model Resposta {
   justificativa3 String
   pesquisaId     String
   pesquisa       Pesquisa @relation(fields: [pesquisaId], references: [id])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  expiresIn Int
+  usuarios  Usuarios @relation(fields: [usuarioId], references: [id])
+  usuarioId String   @unique
 }

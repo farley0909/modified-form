@@ -8,7 +8,7 @@ async function setRespondivel(){
     let token = getToken()
     let researchs = await getResearchs(token)   
     researchs.pesquisas.forEach(async el => {
-        if(el.questao === trim){
+        if(el.research === trim){
            try {
             let data = {
                 id: el.id

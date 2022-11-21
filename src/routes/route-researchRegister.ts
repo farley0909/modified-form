@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { pesquisaModel } from "../useCases/cadastroPesquisa/pesquisaModel";
+import { researchModel } from "../useCases/research/ResearchModel";
 import jwt from 'jsonwebtoken'
-import { pesquisaController } from "../useCases/cadastroPesquisa/pesquisaController";
+import { researchController } from "../useCases/research/researchController";
 
 let route_researchRegister= Router()
 
@@ -14,9 +14,9 @@ route_researchRegister.post('/pesquisas/cadastro/:token', async (req, res)=>{
     } catch (error) {
         console.log('houve um erro: ', error.message)
     }
-    let pesquisaM  = new pesquisaModel(idUsuario.id, questao)
-    let pesquisaC = new pesquisaController(pesquisaM)
-    await pesquisaC.salvar()
+    let pesquisaM  = new researchModel(idUsuario.id, questao)
+    let pesquisaC = new researchController(pesquisaM)
+    await pesquisaC.save(pesquisaM)
     res.json({cadastrado:'cadastrou'})
     
 })

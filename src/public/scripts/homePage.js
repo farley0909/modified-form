@@ -29,10 +29,7 @@ let respondivel = true
 switchRespondivel.addEventListener("click", ()=>{
    setRespondivel()
 })
-btnCloseRespostaDados.addEventListener('click', ()=>{
-    document.getElementById("modal-respostasDados").style.display="none"
 
-})
 btnCopy.addEventListener('click', copy)
 btnDeletaPesquisa.addEventListener('click', removePesquisa )
 btnTabRespostas.addEventListener('click', showRespostasTab)

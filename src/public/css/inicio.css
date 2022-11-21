@@ -8,9 +8,7 @@
 .nomeUsuario {
    font-size: 14pt;
 }
-.nomeUsuario i{
 
-}
 #Conteudo-principal h1{
     text-align: center;
     font-size: 26pt;
@@ -80,14 +78,48 @@
     border-bottom: 4px solid #5fc2ab;
    
 }
-
+#dashboard-config {
+    margin-bottom: 22%; 
+}
 #dashboard-perguntas {
     display: block;
-    
+    margin-bottom: 14%;
 }
+
 #dashboard-respostas {
     display: none;
+    color:black;
+    background-color: white;
+    width: 100%;
+    max-height: 55vh;
+    min-height: 55vh;
+    overflow-y: scroll;
+    margin-top: -4%;
+    margin-bottom: 2%;
 }
+
+
+#dashboard-respostas td {
+    text-align: center;     /* alinhamento horizontal */
+    vertical-align: middle
+ 
+}
+#dashboard-respostas th {
+    text-align: center;     /* alinhamento horizontal */
+    vertical-align: middle
+ 
+}
+.tituloResposta {
+    background-color: #1b776e;
+    display: block;
+    margin: auto;
+
+}
+#dashboard-respostas h2 {
+   font-size: 16pt;
+   font-weight: bold;
+   text-align: center;
+ }
 #dashboard-config {
     display: none;
 }
@@ -112,7 +144,6 @@
     font-weight: 300;
     margin-bottom: 8%;
 }
-
 #modal-content h1{
     text-align: center;
     font-size: 24pt;
@@ -136,14 +167,7 @@
 #listaRespostas a{
     cursor: pointer;
 }
-#dashboard-respostas {
-    width: 80%;
-    margin: auto;
-    margin:auto; /* Centraliza sua tabela */
-}
-#dashboard-respostas {
-   text-align: center;
-}
+
 #form {
     width: 60%;
     margin-left: auto;
@@ -179,13 +203,7 @@
 #nomeUsuario {
     cursor: pointer;
 }
-#tbDadosRespostas {
-    width: 70%;
-    margin: auto;
-}
-#tbDadosRespostas th {
-   padding: 2rem;
-}
+
 #btnCloseRespostaDados {
     margin-top: 5%;
 

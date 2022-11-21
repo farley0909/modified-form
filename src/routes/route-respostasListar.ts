@@ -7,8 +7,8 @@ route_respostasListar.post('/respostas/listar/:token', async (req, res)=>{
         let {token} = req.params
         let {id} = req.body
         let controller = new responseController()
-        let respsotas  = await controller.getAllRespostas(id)
-        res.json({respostas: respsotas})
+        let answers  = await controller.getAllAnswers(id)
+        res.json({respostas: answers})
     } catch (error) {
         res.json({respostas: false})
     }

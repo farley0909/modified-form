@@ -10,7 +10,5 @@ import { feedDashboard } from "./feedDashboard.js"
     dashboard.style.display="none"
     dashboard.style.display="block"
     feedDashboard(research)
-    
-    
  }
  export { openDashboard }

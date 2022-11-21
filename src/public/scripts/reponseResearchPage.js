@@ -22,8 +22,10 @@ let splitado = path.split('/')
 let id = splitado[2]
 let pesquisa
 window.addEventListener('load',async ()=>{
-    try {
+
+    try {   
         pesquisa = await getResearchById(id) 
+        console.log(pesquisa)
         if(pesquisa.respondivel){
             mostraPesquisaTitulo(pesquisa) 
            let group1 =  document.querySelectorAll('.group1')
@@ -48,9 +50,11 @@ window.addEventListener('load',async ()=>{
                 resposta3.classList.add("invalid")
             }
             else{
+    
                 respostas.push(resposta1.value)
                 respostas.push(resposta2.value)
                 respostas.push(resposta3.value)
+                console.log(respostas)
                 openAvaliation()
                 preencheLabelNotas(respostas)  
             }
@@ -70,6 +74,7 @@ window.addEventListener('load',async ()=>{
             btnProximoNota.addEventListener('click', ()=>{
                 if(justificativas.length == 0){
                     notas.push(getNotas())
+                    console.log(notas)
                     justificativas.push(getJustificativas())
                     document.getElementById("campoJustificativa").style.display="none"
                     document.getElementById("nota-resposta").innerHTML=""+respostas[1]
@@ -86,6 +91,7 @@ window.addEventListener('load',async ()=>{
                         })
                 }else if(justificativas.length == 1){
                     notas.push(getNotas())
+                    console.log(notas)
                     justificativas.push(getJustificativas())
                     let group1 = document.querySelectorAll('.group1')
                         group1.forEach(el => {
@@ -98,9 +104,14 @@ window.addEventListener('load',async ()=>{
                         })
                 }else if(justificativas.length == 2){
                     notas.push(getNotas())
+                    console.log(notas)
                     justificativas.push(getJustificativas())
                     console.log("Essa daqui é a pesquisa: ", pesquisa)
                     try {
+                        console.log(respostas)
+                        console.log(notas)
+                        console.log(justificativas)
+                        console.log(pesquisa)
                         enviaResposta(notas, respostas, justificativas, pesquisa)
                     } catch (error) {
                         console.log(error.message)
@@ -110,6 +121,7 @@ window.addEventListener('load',async ()=>{
             })
             
         }else {
+            
             document.getElementById('modal').style.display="none"
             document.getElementById('modal-PesquisaNaoRespondivel').style.display="block"
         }

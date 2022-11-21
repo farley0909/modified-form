@@ -4,6 +4,7 @@ import { cadastroController } from "../useCases/User/cadastro_controller";
 import { route_loginPage } from "./route-loginPage";
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import { generateRefreshToken } from "../provider/generateRefreshToken";
 
 const route_validateLogin = Router()
 
@@ -11,7 +12,7 @@ route_validateLogin.post("/usuario/login", async (req, res)=>{
     const {email, senha} = req.body
     let valida = await validarLogin(email, senha)
     if(valida!= false){
-        let token = await jwt.sign({id:valida.id}, process.env.JWT_SECRET, {expiresIn:"1h"})
+        let token = await jwt.sign({id:valida.id}, process.env.JWT_SECRET, {expiresIn:"3h"})
         res.json({message:token})
     }else{
         res.json({message:valida})

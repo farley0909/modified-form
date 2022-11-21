@@ -8,10 +8,11 @@ async function removePesquisa(){
         let token = getToken()
         let pesquisa = document.getElementById("pesquisa_dashboard")
         let researchs = await  getResearchs(token)
-        
         researchs.pesquisas.forEach(async element => {
+            
             let noSpaces = pesquisa.innerHTML.trim()
-            let compara = noSpaces.localeCompare(element.questao)
+            console.log(noSpaces)
+            let compara = noSpaces.localeCompare(element.research)
             if(compara===0){
                 try {
                         console.log("Esse é o id que esta sendo enviado pra rota de remoção: ", element.id)
@@ -24,12 +25,11 @@ async function removePesquisa(){
                         body: JSON.stringify({id: element.id})
                     })
                     let res = await request.json()
-                    console.log(res)
                     if(res.status===true){
                         apagaPesquisaLista(noSpaces)
                     }
                 }catch (error) {
-                    console.log(error.message)
+                    console.log(error)
                 }
             }
             

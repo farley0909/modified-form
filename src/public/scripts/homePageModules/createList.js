@@ -10,9 +10,9 @@ async function createList(content){
         let a = document.createElement('a')
         a.classList.add("collection-item")
         a.addEventListener('click', ()=>{
-            openDashboard(pesquisas.pesquisas[k].questao)
+            openDashboard(pesquisas.pesquisas[k].research)
         })
-        a.innerHTML=""+pesquisas.pesquisas[k].questao
+        a.innerHTML=""+pesquisas.pesquisas[k].research
         ul.appendChild(a)
     }
     divPesquisas.appendChild(ul)
