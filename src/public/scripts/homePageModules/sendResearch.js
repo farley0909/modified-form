@@ -50,11 +50,11 @@ async function sendResearch(token){
             ul.id="listaPesquisas"
             ul.classList.add('collection')
             let pesquisas =await getResearchs(token)
-            console.log(pesquisas)
+            console.log("Essa foi a pesquisa que pegou: ", pesquisas)
             let a = document.createElement('a')
             a.classList.add('collection-item')
             a.addEventListener('click', ()=>{
-                openDashboard(pesquisas.pesquisas[0].questao)
+                openDashboard(pesquisas.pesquisas[0].research)
             })
 
             a.innerHTML=""+pesquisa

@@ -1,9 +1,10 @@
 import { Router } from "express";
 import jwt from 'jsonwebtoken'
+import { verificaToken } from "../middleware/verificaToken";
 import { cadastroController } from "../useCases/User/cadastro_controller";
 const route_getUserInfo= Router()
 
-route_getUserInfo.get("/usuario/info/:token", async (req, res)=>{
+route_getUserInfo.get("/usuario/info/:token",  async (req, res)=>{
     let token = req.params.token
     let usuarioController = new cadastroController()
     try {
@@ -19,7 +20,7 @@ route_getUserInfo.get("/usuario/info/:token", async (req, res)=>{
         }
         res.json({usuario:data})
     } catch (error) {
-        console.log(error)
+       res.redirect('/usuario/')
     }
 })
 export {route_getUserInfo}

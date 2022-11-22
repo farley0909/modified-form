@@ -1,6 +1,7 @@
 import { feedDashboard } from "./feedDashboard.js"
 
  async function openDashboard(research){
+   console.log("openDashBoard: ", research)
     let dashboard = document.getElementById("moodal-dashboard")
     let fade = document.getElementById('fade')
     let mainContent = document.getElementById('Conteudo-principal')

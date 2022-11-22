@@ -4,6 +4,7 @@ import { getToken } from "./getToken.js"
 import { insereRespostas } from "./insereRespostas.js";
 
 async function feedDashboard(research){
+    console.log("Research recebida: ", research)
     let token = getToken()
     let researchs = await getResearchs(token)   
     console.log(researchs)

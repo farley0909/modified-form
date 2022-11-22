@@ -1,5 +1,6 @@
 import { Router } from "express";
 import jwt from 'jsonwebtoken'
+import { verificaToken } from "../middleware/verificaToken";
 import { researchController } from "../useCases/research/researchController";
 let route_getResearchs = Router()
 

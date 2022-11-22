@@ -11,7 +11,11 @@
     <title>Login</title>
 </head>
 <body>
-    <main class="container">
+    <main class="row">
+        <div  id="divLeft" class="col s6">
+            <img src="./images/teste.png" id="imgLogo" width="250px" height="250px">
+        </div>
+        <div id="divRigth" class="col s6">
             <h1>Faça seu login</h1> 
             <form id="formLogin" action="http://localhost:8080/usuario/login" method="post">
                     <label id="lbEmail">Email</label>
@@ -22,7 +26,9 @@
                
                 <span>Não tem uma conta? <a href="http://localhost:8080/usuario/cadastro" target="_self">Cadastre-se</a></span>
                 <button id="btnEntrar" type="submit" class="btn waves-effect waves-light">Entrar</button>  
-            </form>     
+            </form>  
+        </div>
+             
     </main>
     <script src="./scripts/login_user.js"></script>
 </body>

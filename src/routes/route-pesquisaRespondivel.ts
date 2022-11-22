@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { verificaToken } from "../middleware/verificaToken";
 import { researchController } from "../useCases/research/researchController";
 
 let route_pesquisaRespondivel = Router()

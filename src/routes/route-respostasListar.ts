@@ -1,8 +1,9 @@
 import { Router } from "express";
+import { verificaToken } from "../middleware/verificaToken";
 import { responseController } from "../useCases/response/responseController";
 
 let route_respostasListar = Router()
-route_respostasListar.post('/respostas/listar/:token', async (req, res)=>{
+route_respostasListar.post('/respostas/listar/:token',  async (req, res)=>{
     try {
         let {token} = req.params
         let {id} = req.body
